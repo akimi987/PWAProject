@@ -1,0 +1,181 @@
+:host {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #containerQueriesExplications {
+    background-color: #356568;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #containerQueriesExplications h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  #containerQueriesExplications p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  #dimension-fenetre {
+    text-align: center;
+    font-size: 1.2em;
+    color: #9a1607; 
+    margin-bottom: 20px;
+    animation: blink 2s infinite alternate;
+  }
+  
+  @keyframes blink {
+    to {
+      opacity: 0.1;
+    }
+  }
+  @container (min-width: 600px) {
+    :host {
+      max-width: 1200px;
+    }
+  }
+  
+  @container (min-width: 900px) {
+    :host {
+      max-width: 1600px;
+    }
+  }
+  
+  .data-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .data-card {
+    position: relative;
+    flex: 1 0 200px;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .data-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .bar-chart {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #ecf0f1;
+  }
+  
+  .bar {
+    flex: 1;
+    transition: flex 0.3s ease;
+  }
+  
+  .details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .details.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #356568;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+
+  #codeExtrait {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .code-extrait {
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: #356568;
+  }
+  
+  pre {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 10px;
+    overflow-x: auto;
+  }
+  
+  code {
+    display: block;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+  }
+  

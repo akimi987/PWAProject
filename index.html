@@ -1,34 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fonctions trigonométriques en CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Container Queries</title>
 </head>
 <body>
-    <h1 class="trig-title"> Fonctions trigonométriques en css</h1>
-    <div class="trig-desc">
-        <h3>Descriptif de la fonctonnalité</h3>
-        <p>En CSS, il est possible d'écrire des expressions mathématiques. À la base se trouve la fonction calc()
-            pour effectuer des calculs, mais vous avez probablement déjà entendu parler de min(), max() et clamp().
-            Dans Chrome 111, ces fonctions trigonométriques sin(), cos(), tan(), asin(),
-            acos(), atan() et atan2() sont associées. Ces fonctions sont définies dans 
-            le module Valeurs et unités de niveau 4 du CSS et sont disponibles dans tous les navigateurs.
+    <section id="containerQueriesExplications">
+        <h1>Container Queries illustration</h1>
+        <p>
+          Cette page démontre l'utilisation des Container Queries, une nouvelle fonctionnalité en css.Les container Queries (reqêtes de containers) 
+          vous permettent d’appliquer desstyles à un élément en fonction de la taille du conteneur de l’élément. Si, par exemple, un conteneur dispose
+          de moins d’espace disponible dans le contexte environnant, vous pouvez masquer certains éléments ou utiliser des polices plus petites.
         </p>
-        <h3>Navigateurs pris en charge</h3>
-        <ul class="list-nav">
-            <li>Chrome</li>
-            <li>Edge</li>
-            <li>Firefox</li>
-            <li>Safari</li>
-        </ul>
-        <p>Les trois "fonctions de tri" principales sont les suivantes:</p>
-        <ul class="list-funct">
-            <li>Chrome</li>
-            <li>Edge</li>
-            <li>Firefox</li>
-            <li>Safari</li>
-        </ul>
-    </div>
+        <p>
+            Ils sont une alternative aux médias Queries, qui appliquent des styles aux éléments en fonction de la taille de la fenêtre d’affichage
+            ou d’autres caractéristiques de l’appareil.
+        </p>
+        <p>
+            Pour utiliser des requêtes de conteneur, vous devez déclarer un contexte d’inclusion sur un élément afin que le navigateur sache que 
+            vous souhaiterez peut-être interroger les dimensions de ce conteneur ultérieurement.
+        </p>
+        <br>
+        <p>
+            Dans l'exemple suivant :  nous utilisons des cartes pour illustrer le fonctionnement des container Queries. 
+            Vous avez la possibilité d'ajouter des cartes ou d'en supprimer. Et vous pouvez réduire ou augmenter la taille de la fenêtre pour 
+            observer le comportement des cartes dont la disposition change en fonction de la taille de la fenêtre et aussi du nombre de carte.
+        </p>
+    </section>
+    <p id="dimension-fenetre">Réduisez ou agrandissez la taille de la fenêtre pour voir le comportement des cartes!</p>
+
+    <!--element web component -->
+    <responsive-element></responsive-element>
+
+    <section id="codeExtrait">
+        <h2>Extraits de code</h2>
+        <p>Ci-dessous un extrait de code pour avoir une idée de leur utilisation :</p>
+        <div class="code-extrait">
+          <h3>CSS (Container Queries):</h3>
+          <pre>
+            <code>
+                @container (min-width: 600px) {
+                    :host {
+                      max-width: 1200px;
+                    }
+                  }
+                  
+                  @container (min-width: 900px) {
+                    :host {
+                      max-width: 1600px;
+                    }
+                  }
+      
+            </code>
+          </pre>
+          <p>Explication:</p>
+          <p>Ces requêtes de conteneur ajustent la largeur maximale de l’élément personnalisé en fonction de la largeur du conteneur:</p>
+          <div>
+            <p>Si la largeur du conteneur est égale ou supérieure à 600 pixels, la largeur maximale de l’élément personnalisé est définie sur 1200 pixels.</p>
+            <p>Si la largeur du conteneur est supérieure ou égale à 900 pixels, la largeur maximale de l’élément personnalisé est ajustée à 1600 pixels.</p>
+          </div>
+        </div>
+      </section>
+      <div class="btn-install">
+        <button id="installButton" style="display: none;">Installer l'application</button>
+      </div>
+    <script src="./container-element.js"></script>
 </body>
 </html>
