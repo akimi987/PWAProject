@@ -31,10 +31,3 @@ Tout en natif : pas de build, pas de librairies
 Mise en ligne (netlify ou autre)
 Le support navigateur est "libre" (même si votre choix CSS est très peu supporté) mais la page doit indiquer si le client supporte la fonctionnalité ou non
 Mobile first, pas de mise en page spécifique aux écrans plus larges (sauf si cela fait partie de la démonstration bien sûr)
-
-_Barème_
-
-5 points : présentation claire et détaillée de la fonctionnalité
-5 points : mise en place de la PWA
-5 points : usage des web components
-5 points : qualité et accessibilité du HTML/CSS
