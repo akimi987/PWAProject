@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
+  
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Container Queries</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <script src="./container-element.js" defer></script>
+    <script src="./sw.js" defer></script>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <title>Container Queries</title>
 </head>
+
 <body>
     <section id="containerQueriesExplications">
-        <h1>Container Queries illustration</h1>
+        <h2>Illustration @Container Queries</h2>
         <p>
           Cette page démontre l'utilisation des Container Queries, une nouvelle fonctionnalité en css.Les container Queries (reqêtes de containers) 
-          vous permettent d’appliquer desstyles à un élément en fonction de la taille du conteneur de l’élément. Si, par exemple, un conteneur dispose
+          vous permettent d’appliquer des styles à un élément en fonction de la taille du conteneur de l’élément. Si, par exemple, un conteneur dispose
           de moins d’espace disponible dans le contexte environnant, vous pouvez masquer certains éléments ou utiliser des polices plus petites.
         </p>
         <p>
@@ -26,12 +32,13 @@
         <p>
             Dans l'exemple suivant :  nous utilisons des cartes pour illustrer le fonctionnement des container Queries. 
             Vous avez la possibilité d'ajouter des cartes ou d'en supprimer. Et vous pouvez réduire ou augmenter la taille de la fenêtre pour 
-            observer le comportement des cartes dont la disposition change en fonction de la taille de la fenêtre et aussi du nombre de carte.
+            observer le comportement des cartes dont la disposition et la taille change en fonction de la taille de la fenêtre et aussi du nombre de cartes.
         </p>
+        <br>
+        <p>Notons</p>
     </section>
     <p id="dimension-fenetre">Réduisez ou agrandissez la taille de la fenêtre pour voir le comportement des cartes!</p>
 
-    <!--element web component -->
     <responsive-element></responsive-element>
 
     <section id="codeExtrait">
@@ -45,14 +52,13 @@
                     :host {
                       max-width: 1200px;
                     }
-                  }
+                }
                   
-                  @container (min-width: 900px) {
-                    :host {
-                      max-width: 1600px;
-                    }
+                @container (min-width: 900px) {
+                  :host {
+                    max-width: 1600px;
                   }
-      
+                }
             </code>
           </pre>
           <p>Explication:</p>
@@ -64,8 +70,8 @@
         </div>
       </section>
       <div class="btn-install">
-        <button id="installButton" style="display: none;">Installer l'application</button>
+        <h1>Container Queries en CSS</h1>
+        <button id="installButton" >Installer l'application</button>
       </div>
-    <script src="./container-element.js"></script>
 </body>
 </html>

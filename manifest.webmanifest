@@ -1,5 +1,11 @@
 {
-    "name": "Container Query PWA",
+    "name": "Container Query",
+    "short_name": "CQ",
+    "description": "Nouvelle fonctionnalité css",
+    "theme_color": "#356568",
+    "background_color": "#9a1607",
+    "display": "standalone",
+    "start_url": "/?source=pwa",
     "icons": [
         {
           "src": "/assets/icons/icon-72x72.png",
@@ -41,7 +47,5 @@
           "sizes": "512x512",
           "type": "image/png"
         }
-      ],
-      "start_url": "/?source=pwa",
-      "display": "standalone"
+      ] 
 }
