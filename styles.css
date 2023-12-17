@@ -129,6 +129,10 @@
     color: white;
     cursor: pointer;
   }
+
+  #installButton {
+    background-color: #9a1607;
+  }
   
   .delete-button {
     position: absolute;
@@ -178,4 +182,6 @@
     font-family: 'Courier New', Courier, monospace;
     color: #333;
   }
+
+
   
