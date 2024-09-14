@@ -1,7 +1,7 @@
 {
-    "name": "Container Query",
+    "name": "Container Query & PWA",
     "short_name": "CQ",
-    "description": "Nouvelle fonctionnalité css",
+    "description": "Nouvelle fonctionnalité css et PWA",
     "theme_color": "#356568",
     "background_color": "#9a1607",
     "display": "standalone",
